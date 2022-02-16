@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+
+
+import React from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const handleSubmit = event => {
+   event.preventDefault();
+   alert('Form submit olundu!')
+ }
+
+  return(
+    <div className="wrapper">
+      <h1>Salam</h1>
+      <form onSubmit={handleSubmit}>
+        <fieldset>
+          <label>
+            <p>Name</p>
+            <input name="name" />
+          </label>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
     </div>
-  );
+  )
 }
 
 export default App;
+
+
